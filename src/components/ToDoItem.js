@@ -2,11 +2,13 @@ import React from 'react';
 
 const ToDoItem = props => {
 
+  // update the state of the item
   const updateItem = e => {
     e.preventDefault();
     const item = props.data;
     props.handleUpdate(item);
   }
+  // or delete
   const deleteItem = e => {
     e.preventDefault();
     const item = props.data;

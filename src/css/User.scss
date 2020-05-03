@@ -1,0 +1,100 @@
+.btn {
+    border: none;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 10px;
+    width: 70px;
+    background: $btnBg;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        opacity: 0.9;
+        color: $red;
+    }
+}
+
+.item-button {
+    background-color: $inputBg;
+    font-size: 1.7em;
+
+    &:hover {
+        color: $red;
+    }
+}
+
+.delete-icon {
+    font-size: 1.5em;
+    background-color: $inputBg;
+    border: none;
+
+    &:hover {
+        color: $red;
+    }
+}
+
+.item {
+    padding: 0px 10px;
+    background: $inputBg;
+    margin: 10px 0;
+    border-radius: 10px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .button-container {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.main-container {
+    position: relative;
+    padding: 20px 10px;
+
+    .feedback {
+        color: $red;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+    .form-container {
+        .input-item {
+            width: 100%;
+            input {
+                padding: 10px;
+                border-radius: 10px;
+                border: none;
+                background: $inputBg;
+                margin-right: 10px;
+                color: white;
+                font-size: 1.2em;
+                
+                min-width: 300px;
+            }
+        }
+    }
+
+    .empty-screen {
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+
+        img {
+            height: 200px;
+        }
+    }
+
+    .todones-container {
+        p {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+    }
+}

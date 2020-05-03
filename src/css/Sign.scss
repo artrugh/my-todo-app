@@ -1,0 +1,22 @@
+
+form {
+
+display: flex;
+align-items: center;
+flex-direction: column;
+input{
+    margin-top: 10px;
+}
+.sign-button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    // text-decoration: none;
+    background: $inputBg;
+    margin-top: 20px;
+    color: white;
+    font-size: 1.2em;
+    min-width: 130px;
+    text-align: center;
+  }
+}

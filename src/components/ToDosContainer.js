@@ -3,13 +3,14 @@ import ToDoItem from './ToDoItem';
 
 export const ToDosContainer = props => {
 
-  const updateItem = item => props.updateFromChild(item);
-  const deleteItem = item => props.deleteFromChild(item);
   const data = props.items;
+  const updateItem = item => props.updateFromChild(item);
+  const deleteItem = item => props.deleteFromChild(item);  
 
   const todoItems = data.map(el =>
     <ToDoItem
-      key={el._id} data={el}
+      key={el._id}
+      data={el}
       handleUpdate={updateItem}
       handleDelete={deleteItem}
     />);
@@ -18,7 +19,7 @@ export const ToDosContainer = props => {
     <div className="todos-container">
       {data.length > 0 && (
         <div className="todos">
-          <h5>TODOS</h5>
+          <h5>{props.name}</h5>
           {todoItems}
         </div>
       )}

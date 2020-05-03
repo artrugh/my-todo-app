@@ -1,0 +1,30 @@
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .sign-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      align-items: center;
+  
+      @media (max-width: 400px) {
+        top: -100px;
+      }
+  
+      .sign {
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        text-decoration: none;
+        background: $inputBg;
+        margin-top: 50px;
+        color: white;
+        font-size: 1.2em;
+        min-width: 130px;
+        text-align: center;
+      }
+    }
+  }

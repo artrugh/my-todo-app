@@ -1,0 +1,20 @@
+nav {
+  min-width: 300px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $navBg;
+  min-height: 60px;
+  padding: 10px;
+  height: $headerHeight;
+  position: sticky;
+  top: 0;
+  color: white;
+
+  a {
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+  }
+}

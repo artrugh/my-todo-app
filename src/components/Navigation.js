@@ -1,24 +1,17 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => (
   <nav>
-    <NavLink to="/"
-    id = "title">
+
+    <Link to="/user"
+      className="todo-app">
       TODO APP
-    </NavLink>
-    <ul>
-      <li>
-        <NavLink to="/" activeClassName="selected">
-          Home
-          </NavLink>
-      </li>
-      <li>
-        <NavLink to="/news" activeClassName="selected">
-          News
-          </NavLink>
-      </li>
-    </ul>
+      </Link>
+    <Link to="/" activeClassName="selected">
+      Logout
+          </Link>
+
   </nav>
 );
 

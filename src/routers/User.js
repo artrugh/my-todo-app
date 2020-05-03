@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
+// components
+import Navigation from '../components/Navigation';
 import FormContainer from '../components/FormContainer';
 import { ToDosContainer } from '../components/ToDosContainer';
-import { ToDonesContainer } from '../components/ToDonesContainer';
+// import { ToDonesContainer } from '../components/ToDonesContainer';
 import { Spinner } from '../components/Spinner';
 
 import NotFound from './NotFound';
 
-class MainContainer extends Component {
+class User extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -141,33 +143,38 @@ class MainContainer extends Component {
     // const todos = data.filter(el => {if (!el.status) return el;});
 
     return (
-      <main className="main-container">
-        <FormContainer addTodo={this.handleAddTodo} />
-        <div className="feedback">
-          {this.state.feedback && (
-            <small>Oops, our cat brokes the internet. Please try again...</small>
-          )}
-        </div>
-        {this.state.loading && <Spinner />}
-        {!this.state.showFriend ? (
-          <span>
-            <ToDosContainer
-              items={todos}
-              updateFromChild={this.handleUpdate}
-              deleteFromChild={this.handleDelete}
-            />
-            <ToDonesContainer
-              items={todones}
-              updateFromChild={this.handleUpdate}
-              deleteFromChild={this.handleDelete}
-            />
-          </span>
-        ) : (
-            <NotFound />
-          )}
-      </main>
+      <>
+        <Navigation></Navigation>
+        <main className="main-container">
+          <FormContainer addTodo={this.handleAddTodo} />
+          <div className="feedback">
+            {this.state.feedback && (
+              <small>Oops, our cat brokes the internet. Please try again...</small>
+            )}
+          </div>
+          {this.state.loading && <Spinner />}
+          {!this.state.showFriend ? (
+            <span>
+              <ToDosContainer
+                name="TODOS"
+                items={todos}
+                updateFromChild={this.handleUpdate}
+                deleteFromChild={this.handleDelete}
+              />
+              <ToDosContainer
+                name="TODONES"
+                items={todones}
+                updateFromChild={this.handleUpdate}
+                deleteFromChild={this.handleDelete}
+              />
+            </span>
+          ) : (
+              <NotFound />
+            )}
+        </main>
+      </>
     );
   }
 }
 
-export default MainContainer;
+export default User;

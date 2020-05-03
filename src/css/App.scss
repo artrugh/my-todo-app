@@ -7,6 +7,13 @@ $red: #860202;
 $headerHeight: 60px;
 // font-family: 'Bowlby One SC', cursive;
 
+@import './Nav.scss';
+@import './Home.scss';
+@import'./Sign.scss';
+@import './User.scss';
+@import './Spinner.scss';
+
+
 * {
   font-family: monospace;
   box-sizing: border-box;
@@ -25,219 +32,47 @@ body {
   color: white;
   max-width: 400px;
 
-  .news-container {
-    position: relative;
-    display: flex;
-    margin-left: -30px;
-    /* gutter size offset */
-    width: auto;
-    padding: 10px;
+  // .news-container {
+  //   position: relative;
+  //   display: flex;
+  //   margin-left: -30px;
+  //   /* gutter size offset */
+  //   width: auto;
+  //   padding: 10px;
 
-    .col {
-      padding-left: 30px;
-      /* gutter size */
-      background-clip: padding-box;
+  //   .col {
+  //     padding-left: 30px;
+  //     /* gutter size */
+  //     background-clip: padding-box;
 
-      .article {
-        background: $navBg;
-        border-radius: 10px;
-        margin-bottom: 30px;
+  //     .article {
+  //       background: $navBg;
+  //       border-radius: 10px;
+  //       margin-bottom: 30px;
 
-        .img {
-          img {
-            border-radius: 10px 10px 0 0;
-            width: 100%;
-          }
-        }
+  //       .img {
+  //         img {
+  //           border-radius: 10px 10px 0 0;
+  //           width: 100%;
+  //         }
+  //       }
 
-        .info {
-          padding: 5px;
-          margin: 5px;
+  //       .info {
+  //         padding: 5px;
+  //         margin: 5px;
 
-          .title {
-            font-size: 16px;
-          }
-        }
-      }
-    }
-  }
-
-  .btn {
-    border: none;
-    font-size: 1.2em;
-    padding: 10px;
-    border-radius: 10px;
-    width: 70px;
-    background: $btnBg;
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-
-    &:focus {
-      outline: none;
-    }
-
-    &:hover {
-      opacity: 0.9;
-        color: $red;
-    }
-  }
-
-  .item-button {
-    background-color: $inputBg;
-    font-size: 1.7em;
-
-    &:hover {
-      color: $red;
-    }
-  }
-
-  .delete-icon {
-    font-size: 1.5em;
-    background-color: $inputBg;
-    border: none;
-    &:hover {
-      color: $red;
-    }
-  }
-
-  .item {
-    padding: 0px 10px;
-    background: $inputBg;
-    margin: 10px 0;
-    border-radius: 10px;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .button-container {
-      display: flex;
-      flex-direction: row;
-    }
-  }
-
-  nav {
-    width: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: $navBg;
-    min-height: 60px;
-    padding: 10px;
-    height: $headerHeight;
-    position: sticky;
-    top: 0;
-
-    #title {
-      font-family: 'Bowlby One SC';
-      font-size: 2em;
-      text-decoration: none;
-    }
-
-    a {
-      color: white;
-    }
-
-    ul {
-      padding: 0;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: normal;
-      list-style: none;
-
-      li {
-        margin-left: 5px;
-      }
-    }
-  }
-
-  .main-container {
-    position: relative;
-    padding: 20px 10px;
-
-    .feedback {
-      color: $red;
-      margin-top: 5px;
-      margin-left: 5px;
-    }
-
-    .form-container {
-      .input-item {
-        input {
-          padding: 10px;
-          border-radius: 10px;
-          border: none;
-          background: $inputBg;
-          margin-right: 10px;
-          color: white;
-          font-size: 1.2em;
-          min-width: 300px;
-        }
-      }
-    }
-
-    .empty-screen {
-      margin-top: 20px;
-      width: 100%;
-      text-align: center;
-
-      img {
-        height: 200px;
-      }
-    }
-
-    .todones-container {
-      p {
-        text-decoration: line-through;
-        opacity: 0.5;
-      }
-    }
-  }
+  //         .title {
+  //           font-size: 16px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }
 
-
-.spinner {
-  width: 40px;
-  height: 40px;
-  background-color: yellow;
-  border-radius: 50% 10%;
-  margin: 100px auto;
-  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
-  animation: sk-rotateplane 1.2s infinite ease-in-out;
-  position: absolute;
-  top: -30px;
-  right: 10px;
-}
-
-@-webkit-keyframes sk-rotateplane {
-  0% {
-    -webkit-transform: perspective(120px);
-  }
-
-  50% {
-    -webkit-transform: perspective(120px) rotateY(180deg);
-  }
-
-  100% {
-    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
-  }
-}
-
-@keyframes sk-rotateplane {
-  0% {
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-  }
-
-  50% {
-    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-  }
-
-  100% {
-    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-  }
+.todo-app {
+  font-family: 'Bowlby One SC';
+  font-size: 2em;
+  text-decoration: none;
+  color: white;
 }
